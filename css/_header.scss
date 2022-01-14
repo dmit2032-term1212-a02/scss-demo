@@ -1,0 +1,68 @@
+@use 'colors';
+@use 'mixins';
+
+
+header {
+    position: relative;
+    //background-color: colors.$dk-blue;
+}
+
+//Menu
+//sliding-nav class is going hold all the functionality. the nav element will contain the style.
+.sliding-nav {
+    position: absolute;
+    top: 0;
+    left: -30rem; //hides the menu off the canvas (set back to zero if styling)
+    transition: left 1s ease-in-out;
+}
+
+.is-active .sliding-nav {
+    left: 0;
+}
+
+nav {
+    background-color: colors.$dk-blue;
+    min-width: 30rem; //300px
+    height: 100vh;
+}
+
+ul.menu-items {
+    margin: 0;
+
+    //list-items
+    li {
+        text-align: center;
+        border-bottom: 0.2rem solid colors.$lt-green;
+        //hover
+        &:hover {
+            background-color: colors.$med-green;
+        }
+    }
+    a {
+        display: block;
+        color: colors.$peach;
+        line-height: 6;
+        //hover
+        &:hover {
+            color: colors.$dk-blue;
+        }
+    }
+}
+
+
+//toggle-icon
+.toggle-icon {
+    span {
+        width: 6rem;
+        height: 1rem;
+        display: block;
+        background-color: colors.$lt-green;
+        margin-bottom: 0.6rem;
+        border-radius: 10rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+

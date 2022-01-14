@@ -1,0 +1,19 @@
+@use 'colors' as *; //removes namespaces and adds the module to root namespace.
+@use 'mixins' as *;
+
+//Base Structure
+html {
+    font-size: 62.5%; //base of 10
+}
+
+body {
+    font-size: 1.8rem; //18px
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $dk-blue;
+    background-color: $peach;
+}
+
+.container {
+    padding: 2%;
+}

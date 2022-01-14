@@ -1,0 +1,161 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #192E47;
+  background-color: #FFE5D4;
+}
+
+.container {
+  padding: 2%;
+}
+
+a {
+  display: block;
+  color: #192E47;
+  text-decoration: none;
+}
+
+ul, ol,
+ul li,
+ol li {
+  list-style-type: none;
+  padding: 0;
+}
+
+header {
+  position: relative;
+}
+
+.sliding-nav {
+  position: absolute;
+  top: 0;
+  left: -30rem;
+  transition: left 1s ease-in-out;
+}
+
+.is-active .sliding-nav {
+  left: 0;
+}
+
+nav {
+  background-color: #192E47;
+  min-width: 30rem;
+  height: 100vh;
+}
+
+ul.menu-items {
+  margin: 0;
+}
+ul.menu-items li {
+  text-align: center;
+  border-bottom: 0.2rem solid #BFD3C1;
+}
+ul.menu-items li:hover {
+  background-color: #68A691;
+}
+ul.menu-items a {
+  display: block;
+  color: #FFE5D4;
+  line-height: 6;
+}
+ul.menu-items a:hover {
+  color: #192E47;
+}
+
+.toggle-icon span {
+  width: 6rem;
+  height: 1rem;
+  display: block;
+  background-color: #BFD3C1;
+  margin-bottom: 0.6rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}/*# sourceMappingURL=style.css.map */
