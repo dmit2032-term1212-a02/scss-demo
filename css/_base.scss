@@ -14,6 +14,13 @@ body {
     background-color: $peach;
 }
 
+section {
+    margin: 5.4rem 0;
+    @include break(wide) {
+        margin: 8.1rem 0;
+    }
+}
+
 .container {
     padding: 2%;
 }

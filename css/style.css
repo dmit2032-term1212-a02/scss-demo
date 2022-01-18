@@ -91,6 +91,15 @@ body {
   background-color: #FFE5D4;
 }
 
+section {
+  margin: 5.4rem 0;
+}
+@media (min-width: 1200px) {
+  section {
+    margin: 8.1rem 0;
+  }
+}
+
 .container {
   padding: 2%;
 }
@@ -108,8 +117,21 @@ ol li {
   padding: 0;
 }
 
+h2 {
+  font-size: 4.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+@media (min-width: 1000px) {
+  h2 {
+    font-size: calc(4.8rem + 3vw);
+    transition: font-size 0.2s ease-in-out;
+  }
+}
+
 header {
   position: relative;
+  background-color: #192E47;
 }
 
 .sliding-nav {
@@ -148,6 +170,24 @@ ul.menu-items a:hover {
   color: #192E47;
 }
 
+.mobile-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: #BFD3C1;
+}
+.logo .logo-icon {
+  width: 7rem;
+}
+.logo .logo-name {
+  font-size: 2.1rem;
+}
+
 .toggle-icon span {
   width: 6rem;
   height: 1rem;
@@ -158,4 +198,60 @@ ul.menu-items a:hover {
   cursor: pointer;
   position: relative;
   z-index: 10;
+}
+
+@media (min-width: 600px) {
+  .toggle-icon {
+    display: none;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-layout {
+    order: -1;
+  }
+
+  nav {
+    height: auto;
+  }
+
+  .sliding-nav {
+    position: static;
+    left: 0;
+  }
+
+  ul.menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul.menu-items li {
+    border-bottom: none;
+    border-radius: 0.3rem;
+  }
+  ul.menu-items a {
+    padding: 1rem 0.5rem;
+    line-height: initial;
+  }
+}
+@media (min-width: 1750px) {
+  header .container {
+    max-width: 175rem;
+    margin: auto;
+  }
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #192E47;
+  color: #FFE5D4;
+}
+
+.tutorials {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

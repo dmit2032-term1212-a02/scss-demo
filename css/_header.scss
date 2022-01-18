@@ -4,7 +4,7 @@
 
 header {
     position: relative;
-    //background-color: colors.$dk-blue;
+    background-color: colors.$dk-blue;
 }
 
 //Menu
@@ -49,6 +49,23 @@ ul.menu-items {
     }
 }
 
+.mobile-layout {
+    @include mixins.basic-flex;
+}
+
+//logo
+.logo {
+    @include mixins.flex-column;
+    color: colors.$lt-green;
+    //icon
+    .logo-icon{
+        width: 7rem;
+    }
+    //h1
+    .logo-name {
+        font-size: 2.1rem;
+    }
+}
 
 //toggle-icon
 .toggle-icon {
@@ -65,4 +82,51 @@ ul.menu-items {
     }
 }
 
+//bp: 600px
+@include mixins.break(small) {
+    //hide toggle
+    .toggle-icon { display: none; }
 
+    header {
+        .container {
+            @include mixins.basic-flex;
+        }
+    }
+
+    //logo
+    .mobile-layout {
+        order: -1;
+    }
+
+    //bring menu back
+    nav { height: auto; }
+
+    .sliding-nav {
+        position: static;
+        left: 0;
+    }
+
+    ul.menu-items { 
+        @include mixins.basic-flex;  
+        //list-items
+        li {
+            border-bottom: none;
+            border-radius: 0.3rem;
+        }
+        a {
+            padding: 1rem 0.5rem;
+            line-height: initial;
+        }
+    }
+
+}//end bp: 600
+
+//bp:1750px
+@include mixins.break(exwide) {
+    header {
+        .container {
+            max-width: 175.0rem;
+            margin: auto;
+        }
+    }
+}
